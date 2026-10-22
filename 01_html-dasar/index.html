@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 1 - HTML Dasar</title>
+</head>
+<body>
+
+  <!-- header: bagian atas halaman, biasanya berisi judul/logo -->
+  <header>
+    <h1>Portal Berita Kampus</h1>
+    <p>Contoh struktur HTML semantik — Sub-CPMK51.1</p>
+  </header>
+
+  <!-- nav: kumpulan tautan navigasi -->
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#berita">Berita</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <!-- main: konten utama halaman (hanya boleh ada 1 per halaman) -->
+  <main>
+
+    <!-- section: mengelompokkan konten yang bertema sama -->
+    <section id="berita">
+      <h2>Berita Terbaru</h2>
+
+      <!-- article: konten yang berdiri sendiri, bisa didistribusikan ulang -->
+      <article>
+        <h3>Mahasiswa TI Raih Juara Hackathon</h3>
+        <p>
+          Tim mahasiswa Program Studi Teknologi Informasi berhasil meraih
+          juara pertama pada kompetisi hackathon tingkat nasional.
+        </p>
+        <time datetime="2026-07-01">1 Juli 2026</time>
+      </article>
+
+      <article>
+        <h3>Pendaftaran KKN Semester Ganjil Dibuka</h3>
+        <p>
+          Pendaftaran Kuliah Kerja Nyata (KKN) untuk semester ganjil telah
+          resmi dibuka melalui portal akademik.
+        </p>
+        <time datetime="2026-07-05">5 Juli 2026</time>
+      </article>
+    </section>
+
+    <!-- aside: konten tambahan yang terkait tapi bukan konten utama -->
+    <aside>
+      <h2>Agenda Kampus</h2>
+      <ul>
+        <li>12 Juli - Seminar Teknologi Web</li>
+        <li>20 Juli - Workshop UI/UX</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- footer: bagian bawah halaman -->
+  <footer>
+    <p>&copy; 2026 Program Studi S1 Teknologi Informasi - Universitas Muhammadiyah Yogyakarta</p>
+  </footer>
+
+</body>
+</html>
