@@ -1,0 +1,44 @@
+/* Styling ringan + memanfaatkan pseudo-class :valid dan :invalid
+   agar validasi HTML5 terlihat jelas ke pengguna */
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.ket-lanjutan {
+  font-size: 0.85rem;
+  color: #1f3864;
+  background: #eaf1fb;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* input yang lolos validasi (dan tidak kosong) diberi border hijau */
+input:not(:placeholder-shown):valid {
+  border-color: #2e7d32;
+}
+
+/* input yang gagal validasi (dan sudah disentuh) diberi border merah */
+input:not(:placeholder-shown):invalid {
+  border-color: #c62828;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #555;
+}
