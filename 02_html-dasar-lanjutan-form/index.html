@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 2 - HTML Lanjutan & Form</title>
+</head>
+<body>
+
+  <header>
+    <h1>Formulir Pendaftaran Seminar</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Data Peserta</h2>
+
+      <!-- form: elemen pembungkus semua input -->
+      <!-- action & method menentukan ke mana & bagaimana data dikirim -->
+      <form action="#" method="post">
+
+        <div>
+          <label for="nama">Nama Lengkap</label><br>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+        </div>
+
+        <div>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" placeholder="nama@email.com">
+        </div>
+
+        <div>
+          <label for="nim">NIM</label><br>
+          <input type="text" id="nim" name="nim" placeholder="Contoh: 20210001">
+        </div>
+
+        <div>
+          <label for="prodi">Program Studi</label><br>
+          <select id="prodi" name="prodi">
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="ti">Teknologi Informasi</option>
+            <option value="if">Informatika</option>
+            <option value="si">Sistem Informasi</option>
+          </select>
+        </div>
+
+        <div>
+          <p>Jenis Kelamin</p>
+          <input type="radio" id="pria" name="gender" value="pria">
+          <label for="pria">Pria</label>
+          <input type="radio" id="wanita" name="gender" value="wanita">
+          <label for="wanita">Wanita</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="setuju" name="setuju">
+          <label for="setuju">Saya menyetujui syarat dan ketentuan</label>
+        </div>
+
+        <div>
+          <label for="pesan">Pesan / Pertanyaan</label><br>
+          <textarea id="pesan" name="pesan" rows="4" cols="40" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div>
+
+        <button type="submit">Daftar Sekarang</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Program Studi S1 Teknologi Informasi</p>
+  </footer>
+
+</body>
+</html>
