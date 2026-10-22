@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 3 - HTML Form & Validasi (Lanjutan dari Pertemuan 2)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Formulir Pendaftaran Seminar (dengan Validasi)</h1>
+    <p class="ket-lanjutan">
+      Ini adalah form yang SAMA dengan pertemuan 2, sekarang ditambah atribut
+      validasi HTML5 (required, pattern, minlength, dll.) pada setiap field.
+    </p>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+
+      <div class="field">
+        <label for="nama">Nama Lengkap *</label><br>
+        <!-- required + minlength/maxlength: validasi ditambahkan di sini -->
+        <input type="text" id="nama" name="nama" required minlength="3" maxlength="50"
+               placeholder="Masukkan nama lengkap">
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label><br>
+        <!-- type="email" otomatis memvalidasi format email -->
+        <input type="email" id="email" name="email" required
+               placeholder="nama@email.com">
+      </div>
+
+      <div class="field">
+        <label for="nim">NIM *</label><br>
+        <!-- pattern: aturan format dengan regular expression -->
+        <input type="text" id="nim" name="nim" required
+               pattern="[0-9]{8,10}" title="NIM harus 8-10 digit angka"
+               placeholder="Contoh: 20210001">
+      </div>
+
+      <div class="field">
+        <label for="prodi">Program Studi *</label><br>
+        <select id="prodi" name="prodi" required>
+          <option value="">-- Pilih Program Studi --</option>
+          <option value="ti">Teknologi Informasi</option>
+          <option value="if">Informatika</option>
+          <option value="si">Sistem Informasi</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <p>Jenis Kelamin *</p>
+        <input type="radio" id="pria" name="gender" value="pria" required>
+        <label for="pria">Pria</label>
+        <input type="radio" id="wanita" name="gender" value="wanita" required>
+        <label for="wanita">Wanita</label>
+      </div>
+
+      <div class="field">
+        <input type="checkbox" id="setuju" name="setuju" required>
+        <label for="setuju">Saya menyetujui syarat dan ketentuan *</label>
+      </div>
+
+      <div class="field">
+        <label for="pesan">Pesan / Pertanyaan (opsional)</label><br>
+        <!-- textarea juga bisa divalidasi dengan minlength/maxlength -->
+        <textarea id="pesan" name="pesan" rows="4" cols="40" maxlength="300"
+                  placeholder="Tulis pesan Anda di sini (maks. 300 karakter)..."></textarea>
+      </div>
+
+      <button type="submit">Daftar Sekarang</button>
+      <p class="hint">* wajib diisi — coba kosongkan lalu klik "Daftar Sekarang" untuk melihat validasi bawaan browser.</p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Program Studi S1 Teknologi Informasi</p>
+  </footer>
+
+</body>
+</html>
