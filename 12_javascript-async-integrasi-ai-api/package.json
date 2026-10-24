@@ -1,0 +1,14 @@
+{
+  "name": "pertemuan-12-ai-api",
+  "version": "1.0.0",
+  "description": "Contoh integrasi AI API dengan backend proxy (API key aman di server)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5"
+  }
+}
