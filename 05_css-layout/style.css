@@ -1,0 +1,66 @@
+body { font-family: Arial, sans-serif; margin: 2rem; }
+
+/* ============ FLEXBOX ============ */
+
+.navbar {
+  display: flex;              /* aktifkan flexbox */
+  justify-content: space-between; /* logo di kiri, menu di kanan */
+  align-items: center;        /* rata tengah vertikal */
+  background: #1f3864;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+}
+
+.nav-links {
+  display: flex;      /* ul jadi flex container juga -> li sejajar */
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a { color: white; text-decoration: none; }
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;     /* pindah baris otomatis kalau layar sempit */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 150px;      /* grow shrink basis: fleksibel, minimal 150px */
+  background: #eaf1fb;
+  border: 1px solid #c9d9ef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* ============ CSS GRID ============ */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;   /* sidebar 200px, sisanya konten */
+  grid-template-rows: 60px 1fr 50px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 8px;
+  margin-top: 1rem;
+  height: 300px;
+}
+
+.area-header  { grid-area: header;  background: #1f3864; color: white; }
+.area-sidebar { grid-area: sidebar; background: #c9d9ef; }
+.area-main    { grid-area: main;    background: #eaf1fb; }
+.area-footer  { grid-area: footer;  background: #1f3864; color: white; }
+
+.dashboard > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
