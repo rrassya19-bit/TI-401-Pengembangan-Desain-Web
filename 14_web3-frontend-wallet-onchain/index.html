@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 14 - Web 3.0 Front-End</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Wallet Connect Demo (Front-End Web 3.0)</h1>
+
+  <div class="peringatan">
+    ⚠️ <strong>Keamanan:</strong> aplikasi ini hanya MEMBACA alamat & saldo wallet kalian
+    (read-only). Aplikasi web yang sah <strong>tidak pernah</strong> meminta "private key"
+    atau "recovery phrase" — itu ciri khas penipuan (phishing). Lihat Sub-CPMK53.6.
+  </div>
+
+  <button id="connectBtn">Hubungkan Wallet (MetaMask)</button>
+
+  <div id="walletInfo" class="wallet-info" hidden>
+    <p><strong>Alamat:</strong> <span id="alamatWallet"></span></p>
+    <p><strong>Saldo:</strong> <span id="saldoWallet"></span> ETH</p>
+    <p><strong>Jaringan:</strong> <span id="jaringan"></span></p>
+  </div>
+
+  <p id="pesanStatus"></p>
+
+  <!-- ethers.js via CDN — library untuk berinteraksi dengan blockchain dari sisi front-end -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.1/dist/ethers.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
