@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertemuan 13 - JS Modules & Bootstrap Component</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container mt-4" style="max-width: 500px;">
+    <h1 class="h3">Tambah Produk</h1>
+
+    <!-- Bootstrap Alert (list error validasi), disembunyikan default -->
+    <div id="errorContainer" class="alert alert-danger d-none"></div>
+
+    <form id="formProduk" class="row g-3" novalidate>
+      <div class="col-12">
+        <label for="nama" class="form-label">Nama Produk</label>
+        <input type="text" class="form-control" id="nama">
+      </div>
+      <div class="col-12">
+        <label for="harga" class="form-label">Harga</label>
+        <input type="number" class="form-control" id="harga">
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email Penjual (opsional)</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Simpan Produk</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap Toast Component untuk notifikasi -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast text-bg-success" role="alert">
+      <div class="d-flex">
+        <div id="toastBody" class="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- type="module" wajib supaya import/export di main.js berfungsi -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
